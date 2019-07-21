@@ -8,54 +8,47 @@
 
   <style type="text/css">
     body {
-      font-size: 18px;
+      font-size: large;
       margin: 0;
-      padding: 16px 16px 3em 16px;
+      padding: 0 1rem;
       color: rgba(0,0,0,0.9);
     }
     .page-wrapper {
-      max-width: 65em;
+      max-width: 28rem;
       margin: 0 auto;
+      padding: 1em 0 3em 0;
     }
     h1, h2, h3, h4 {
-      margin-top: 1em;
+      margin-top: 1rem;
       margin-bottom: 0;
     }
     p, ul{
       margin-bottom: 0;
     }
     p {
-      margin-top: 0.75em;
+      margin-top: 1rem;
     }
     ul {
-      margin-top: 0.5em;
-      padding-left: 1.5em;
+      margin-top: 0.3rem;
+      padding-left: 1.5rem;
     }
     li {
-      margin-top: 0.2em;
+      margin-top: 0.2rem;
       list-style: none;
-      text-indent: -0.6em;
-    }
-    hr {
-      display: block;
-      margin-top: 3em;
-      margin-bottom: 3em;
-      height: 0px;
-      border: none;
-      border-bottom: 1px dashed #000;
+      text-indent: -0.6rem;
     }
     .icon-list {
-        padding-left: 2.75em;
+        padding-left: 2.75rem;
     }
     .icon-list li {
-      text-indent: -1.85em;
+      text-indent: -1.85rem;
     }
     li > * {
       text-indent: initial;
     }
     li::before {
       content: "\b7";
-      margin-right: 0.3em;
+      margin-right: 0.3rem;
     }
     a {
       color: inherit;
@@ -63,7 +56,7 @@
     sup {
       vertical-align: baseline;
       position: relative;
-      top: -0.4em;
+      top: -0.4rem;
     }
     .icon-list .ss {
       display: inline-block;
@@ -79,41 +72,55 @@
     .header-section {
       text-align: center;
     }
-    @media screen and (max-width: 899px) {
-      .page-wrapper {
-        max-width: 26em;
-        margin: 0 auto;
-      }
+    .fill-line-wrapper {
+      white-space: nowrap;
+      overflow: hidden;
     }
-    @media screen and (min-width: 900px) {
+    .fill-line-wrapper h3 {
+      display: inline-block;
+    }
+    .fill-line {
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(0,0,0,0.8);
+      margin-left: 0.15em;
+    }
+    .footer {
+      margin-top: 2em;
+      text-align: center;
+      color: rgba(0,0,0,0.5);
+    }
+
+    @media screen and (min-width: 48rem) {
+      .page-wrapper {
+        max-width: 46rem;
+      }
       .column-container {
-        max-width: 65em;
-        margin: 2em auto;
+        margin-top: 2rem;
         display: flex;
       }
       .column-section {
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 1rem;
+        padding-right: 1rem;
         flex-basis: 1px;
         flex-grow: 1;
         flex-shrink: 0;
       }
       .column-section:first-child {
-        margin-left: -1em;
+        margin-left: -1rem;
       }
       .column-section:last-child {
-        margin-right: -1em;
+        margin-right: -1rem;
       }
-      .column-section:not(:first-child) {
-        border-left: 1px solid rgba(0,0,0,0.1);
+      .column-section .fill-line-wrapper {
+        text-align: center;
       }
       .column-section h3 {
-        text-align: center;
         margin-top: 0;
       }
-      .non-column-section {
-        width: 50%;
-        margin: 0 auto;
+      .column-section .fill-line {
+        display: none;
       }
     }
   </style>
@@ -131,7 +138,10 @@
   <div class="column-container">
 
     <div class="column-section">
-      <h3>Currently in Standard</h3>
+      <div class="fill-line-wrapper">
+        <h3>Currently in Standard</h3>
+        <span class="fill-line"></span>
+      </div>
       <p>These sets are currently in Standard:</p>
       <ul class="icon-list">
         <li><!--
@@ -177,24 +187,26 @@
     </div>
 
     <div class="column-section">
-      <h3>Upcoming Releases</h3>
+      <div class="fill-line-wrapper">
+        <h3>Upcoming Changes</h3>
+        <span class="fill-line"></span>
+      </div>
       <p>These sets will be added to Standard on release:</p>
       <ul class="icon-list">
         <li><!--
        --><i class="ss ss-eld"></i>
           <em>Throne of Eldraine</em>
-          <span class="no-wrap">(releases 2019-10-04)</span>
+          <span class="no-wrap">(on 2019-10-04)</span>
         </li>
       </ul>
       <!--
-      <p>Cards from <em>Throne of Eldraine</em> <span class="no-wrap">pre-release</span> events are not Standard-legal until the set is officially released on 2019-10-04.</p>
-      -->
-    </div>
-
-    <div class="column-section">
-      <h3>2019 Rotation</h3>
       <p>
-        The next rotation coincides with the release of <em>Throne of Eldraine</em> on <span class="no-wrap">2019-10-04.</span>
+        Cards from <em>Throne of Eldraine</em> <span class="no-wrap">pre-release</span> events cannot be used in Standard until the set is officially released on 2019-10-04.
+      </p>
+      -->
+      <h4>Rotation</h4>
+      <p>
+        The 2019 rotation coincides with the release of <em class="no-wrap">Throne of Eldraine</em> on <span class="no-wrap">2019-10-04.</span>
       </p>
       <p>
         These sets will rotate out of Standard:
@@ -245,116 +257,138 @@
   </div>
 
   <a name="details"></a>
-  <div class="non-column-section">
+  <div class="fill-line-wrapper">
     <h3>Details</h3>
-    <p>
-      Each year, four main Standard-legal sets are released by <em>Wizards of the Coast</em>.
-    </p>
-    <p>
-      Standard-legal sets are added to Standard on release, and are removed two "rotations" later.
-      Rotations are annual, typically coinciding with the release of the fall set in September or October.
-      This means most sets remain in Standard for <span class="no-wrap">15-24</span> months.
-    </p>
-    <p>
-      A Standard deck contains at least 60 Standard cards, plus an optional sideboard of up to 15 Standard cards.
-      No more than 4 copies of a card may be included, except for basic land cards: <em>Plains</em>, <em>Islands</em>, <em>Swamps</em>, <em>Mountains</em>, and <em>Forests</em>.
-    </p>
-    <p>
-      Full rules are available on the official Magic: the Gathering website <a href="https://magic.wizards.com/en/content/standard-formats-magic-gathering" target="_blank">here</a>.
-    </p>
-    <p>
-      Any copy of a Standard card can be included in a Standard deck, even if that copy is from a non-Standard set.
-      For instance, a Standard deck may include a 1998 copy of <i class="ss ss-usg"></i> <a href="https://scryfall.com/card/usg/132/duress" target="_blank">Duress</a> from <em>Urza's Saga</em>, because <i class="ss ss-m20"></i> <a href="https://scryfall.com/card/m20/97/duress" target="_blank">Duress</a> was also included in <em>Core Set 2020</em>.
-    </p>
+    <span class="fill-line"></span>
   </div>
+  <p>
+    Each year, four Standard-legal sets are released by <em>Wizards of the Coast</em>.
+  </p>
+  <p>
+    These sets are added to Standard on release, and are removed from standard after two "rotations".
+    Rotations are annual, coinciding with the release of the fall set in September or October.
+    This means each set remains in Standard for <span class="no-wrap">15-24</span> months.
+  </p>
+  <p>
+    A legal Standard deck contains at least 60 cards, plus an optional sideboard of up to 15 cards.
+    Each card must be included in a current Standard-legal set.
+    No more than 4 copies of a card may be included, except for the basic land cards
+    <em>Plains</em>, <em>Island</em>, <em>Swamp</em>, <em>Mountain</em>, and <em>Forest</em>.
+  </p>
+  <p>
+    Full rules for Standard are available on the official Magic: the Gathering website
+    <a href="https://magic.wizards.com/en/content/standard-formats-magic-gathering" target="_blank">here</a>.
+  </p>
+  <p>
+    Any copy of a card can be included in a Standard deck, even if that copy is from an older set.
+    For instance, a Standard deck may include a 1998 copy of <a href="https://scryfall.com/card/usg/132/duress" target="_blank">Duress</a>
+    from <em>Urza's Saga</em>, because <a href="https://scryfall.com/card/m20/97/duress" target="_blank">Duress</a>
+    was also included in <em>Core Set 2020</em>.
+  </p>
 
-  <div class="non-column-section">
+  <div class="fill-line-wrapper">
     <h3>Getting Cards for Standard</h3>
-    <p>
-      Most Standard cards can be opened in booster packs of the Standard-legal sets listed above.
-      Many game stores also carry a selection of Standard cards that can be purchased individually.
-    </p>
-    <p>Aside from booster packs, there are several other products that contain a selection of only Standard cards:</p>
-    <ul>
-      <li>Preconstructed "Planeswalker Decks" for Standard-legal sets</li>
-      <li>Preconstructed 2019 and 2020 "Welcome Decks" given away by game stores</li>
-      <li>Preconstructed 2019 "Challenger Decks"</li>
-    </ul>
+    <span class="fill-line"></span>
   </div>
+  <p>
+    Most Standard cards can be opened in booster packs of the Standard-legal sets listed above.
+    Many game stores also carry a selection of Standard cards that can be purchased individually.
+  </p>
+  <p>Aside from booster packs, there are several other products that contain a selection of only Standard cards:</p>
+  <ul>
+    <li>Preconstructed "Planeswalker Decks" for Standard-legal sets</li>
+    <li>Preconstructed 2019 and 2020 "Welcome Decks" given away by game stores</li>
+    <li>Preconstructed 2019 "Challenger Decks"</li>
+  </ul>
 
-  <div class="non-column-section">
+  <div class="fill-line-wrapper">
     <h3>Non-Standard Sets</h3>
-    <p>Some sets are not Standard-legal, and are not added to Standard on release.</p>
-    <p>Recent sets which are not Standard-legal include:</p>
-    <ul class="icon-list">
-      <li><!--
-     --><i class="ss ss-ima"></i>
-        Iconic Masters
-      </li>
-      <li><!--
-     --><i class="ss ss-e02"></i>
-        Explorers of Ixalan Box Set
-      </li>
-      <li><!--
-     --><i class="ss ss-ust"></i>
-        Unstable
-      </li>
-      <li><!--
-     --><i class="ss ss-a25"></i>
-        Masters 25
-      </li>
-      <li><!--
-     --><i class="ss ss-bbd"></i>
-        Battlebond
-      </li>
-      <li><!--
-     --><i class="ss ss-cm2"></i>
-        Commander Anthology Volume II Preconstructed Decks
-      </li>
-      <li><!--
-     --><i class="ss ss-c18"></i>
-        Commander 2018 Preconstructed Decks
-      </li>
-      <li><!--
-     --><i class="ss ss-none"></i>
-        <em>Guild Kit</em> Preconstructed Decks
-      </li>
-      <li><!--
-     --><i class="ss ss-uma"></i>
-        Ultimate Masters
-      </li>
-      <li><!--
-     --><i class="ss ss-mh1"></i>
-        Modern Horizons
-      </li>
-      <li><!--
-     --><i class="ss ss-none"></i>
-        <em>Signature Spellbook</em> Box Sets
-      </li>
-    </ul>
-    <p>Upcoming sets which are not Standard-legal include:</p>
-    <ul class="icon-list">
-      <li><!--
-     --><i class="ss ss-c19"></i>
-        Commander 2019 Preconstructed Decks
-      </li>
-    </ul>
+    <span class="fill-line"></span>
   </div>
+  <p>Some sets are not Standard-legal, and are not added to Standard on release.</p>
+  <p>Recent sets which are not Standard-legal include:</p>
+  <ul class="icon-list">
+    <li><!--
+   --><i class="ss ss-ima"></i>
+   <em>Iconic Masters</em>
+    </li>
+    <li><!--
+   --><i class="ss ss-e02"></i>
+      <em>Explorers of Ixalan</em>
+    </li>
+    <li><!--
+   --><i class="ss ss-ust"></i>
+      <em>Unstable</em>
+    </li>
+    <li><!--
+   --><i class="ss ss-a25"></i>
+      <em>Masters 25</em>
+    </li>
+    <li><!--
+   --><i class="ss ss-bbd"></i>
+      <em>Battlebond</em>
+    </li>
+    <li><!--
+   --><i class="ss ss-cm2"></i>
+      <em>Commander Anthology Volume II</em>
+    </li>
+    <li><!--
+   --><i class="ss ss-c18"></i>
+      <em>Commander 2018</em>
+    </li>
+    <li><!--
+   --><i class="ss ss-none"></i>
+      <em>Guild Kit</em> Preconstructed Decks
+    </li>
+    <li><!--
+   --><i class="ss ss-uma"></i>
+      <em>Ultimate Masters</em>
+    </li>
+    <li><!--
+   --><i class="ss ss-mh1"></i>
+      <em>Modern Horizons</em>
+    </li>
+    <li><!--
+   --><i class="ss ss-none"></i>
+      <em>Signature Spellbook</em> Box Sets
+    </li>
+  </ul>
+  <p>Upcoming sets which are not Standard-legal include:</p>
+  <ul class="icon-list">
+    <li><!--
+   --><i class="ss ss-c19"></i>
+      <em>Commander 2019</em>
+    </li>
+  </ul>
 
-  <div class="non-column-section">
+  <div class="fill-line-wrapper">
     <h3>Related Formats</h3>
+    <span class="fill-line"></span>
+  </div>
+  <p>
+    <em>Brawl</em> is a format which uses the same Standard-legal set rotation as Standard.
+    Brawl is often played casually with 3 or more players per game, and uses different rules for deck construction and gameplay.
+    <br />
+    Read more about Brawl on the offical Magic: the Gathering website <a href="https://magic.wizards.com/en/game-info/gameplay/formats/brawl" target="_blank">here</a>.
+  </p>
+  <p>
+    <em>Modern</em> is a format which allows cards from any Standard-Legal set released since 2003's <em>8th Edition</em>, as well as the <span class="no-wrap">non-Standard-legal</span> set <em>Modern Horizons</em>.
+    Every card added to Standard is also added to Modern.
+    Sets never rotate out of Modern, but numerous cards are included on the Modern banlist.
+    <br />
+    Read more about Modern on the official Magic: the Gathering website <a href="https://magic.wizards.com/en/game-info/gameplay/formats/modern" target="_blank">here</a>.
+  </p>
+
+  <div class="footer">
     <p>
-      <em>Brawl</em> is a format which uses the same Standard-legal set rotation as Standard.
-      Brawl is often played casually with 3 or more players per game, and uses different rules for deck construction and gameplay.
+      <em>MTG Standard</em> is unofficial Fan Content permitted under the Fan Content Policy.
+      Not approved/endorsed by Wizards.
+      Portions of the materials used are property of Wizards of the Coast.
       <br />
-      Read more about Brawl on the offical Magic: the Gathering website <a href="https://magic.wizards.com/en/game-info/gameplay/formats/brawl" target="_blank">here</a>.
+      &copy; Wizards of the Coast LLC.
     </p>
     <p>
-      <em>Modern</em> is a format which allows cards from any Standard-Legal set released since 2003's <em>8th Edition</em>, as well as the <span class="no-wrap">non-Standard-legal</span> set <em>Modern Horizons</em>.
-      Every card added to Standard is also added to Modern.
-      Sets never rotate out of Modern, but numerous cards are included on the Modern banlist.
-      <br />
-      Read more about Modern on the official Magic: the Gathering website <a href="https://magic.wizards.com/en/game-info/gameplay/formats/modern" target="_blank">here</a>.
+      Out of date? Submit an update on <a href="https://github.com/connor-bracewell/mtgstandard" target="_blank">GitHub</a>
     </p>
   </div>
 
