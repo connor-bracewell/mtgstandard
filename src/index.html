@@ -5,14 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css" rel="stylesheet" type="text/css" />
+
   <style type="text/css">
     body {
       font-size: 18px;
       margin: 0;
-      padding: 0 0.5em 3em 0.5em;
+      padding: 16px 16px 3em 16px;
+      color: rgba(0,0,0,0.9);
     }
     .page-wrapper {
-      max-width: 34em;
+      max-width: 65em;
       margin: 0 auto;
     }
     h1, h2, h3, h4 {
@@ -64,6 +66,7 @@
       top: -0.4em;
     }
     .ss {
+      display: inline-block;
       width: 1em;
       text-align: center;
       vertical-align: text-top;
@@ -74,233 +77,300 @@
     .no-wrap {
       display:inline-block;
     }
+    .header-section {
+      text-align: center;
+    }
+    @media screen and (max-width: 899px) {
+      .page-wrapper {
+        max-width: 26em;
+        margin: 0 auto;
+      }
+    }
+    @media screen and (min-width: 900px) {
+      .column-container {
+        max-width: 65em;
+        margin: 2em auto;
+        display: flex;
+      }
+      .column-section {
+        padding-left: 1em;
+        padding-right: 1em;
+        flex-basis: 1px;
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
+      .column-section:first-child {
+        margin-left: -1em;
+      }
+      .column-section:last-child {
+        margin-right: -1em;
+      }
+      .column-section:not(:first-child) {
+        border-left: 1px solid rgba(0,0,0,0.1);
+      }
+      .column-section h3 {
+        text-align: center;
+        margin-top: 0;
+      }
+      .non-column-section {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
   </style>
+
 </head>
 <body>
 <div class="page-wrapper">
-  <h3>About</h3>
-  <p>
-    <em>Standard</em> is a <em>Magic: the Gathering</em> format in which players may only use cards from recent <em>Standard-legal<sup><a href="#details">&dagger;</a></sup></em> sets.
-  </p>
-  <h3>Currently in Standard</h3>
-  <p>The following sets are currently in Standard:</p>
-  <ul class="icon-list">
-    <li><!--
-   --><i class="ss ss-xln"></i>
-      <em>Ixalan</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-rix"></i>
-      <em>Rivals of Ixalan</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-dom"></i>
-      <em>Dominaria</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-m19"></i>
-      <em>Core Set 2019</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-grn"></i>
-      <em>Guilds of Ravnica</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-rna"></i>
-      <em>Ravnica Allegiance</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-war"></i>
-      <em>War of the Spark</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-m20"></i>
-      <em>Core Set 2020</em>
-    </li>
-  </ul>
-  <p>The following cards are currently banned in Standard:</p>
-  <ul>
-    <li><!--
-   --><em><a href="https://scryfall.com/card/xln/154/rampaging-ferocidon" target="_blank">Rampaging Ferocidon</a></em>
-      (from Ixalan)
-    </li>
-  </ul>
 
-  <h3>Upcoming Releases</h3>
-  <p>The following sets are Standard-legal and will be added to Standard on release:</p>
-  <ul class="icon-list">
-    <li><!--
-   --><i class="ss ss-eld"></i>
-      <em>Throne of Eldraine</em>
-      <span class="no-wrap">(releases 2019-10-04)</span>
-    </li>
-    <li><!--
-   --><i class="ss"></i>
-      <em>Winter 2020 Set, codename "Baseball"</em>
-    </li>
-    <li><!--
-   --><i class="ss"></i>
-      <em>Spring 2020 Set, codename "Cricket"</em>
-    </li>
-    <li><!--
-   --><i class="ss"></i>
-      <em>Summer 2020 Set, likely <span class="no-wrap">"Core Set 2021"</span></em>
-    </li>
-  </ul>
+  <div class="header-section">
+    <p>
+      <em>Standard</em> is a <em>Magic: the Gathering</em> format which only allows cards from recent <em>Standard-legal<sup><a href="#details">&dagger;</a></sup></em> sets.
+    </p>
+  </div>
 
-  <h3>2019 Rotation</h3>
-  <p>
-    The next rotation coincides with the release of Throne of Eldraine on <span class="no-wrap">2019-10-04.</span>
-  </p>
-  <p>
-    The following sets will be removed from Standard:
-  </p>
-  <ul class="icon-list">
-    <li><!--
-   --><i class="ss ss-xln"></i>
-      <em>Ixalan</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-rix"></i>
-      <em>Rivals of Ixalan</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-dom"></i>
-      <em>Dominaria</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-m19"></i>
-      <em>Core Set 2019</em>
-    </li>
-  </ul>
-  <p>The following sets will remain in Standard:</p>
-  <ul class="icon-list">
-    <li><!--
-   --><i class="ss ss-grn"></i>
-      <em>Guilds of Ravnica</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-rna"></i>
-      <em>Ravica Allegiance</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-war"></i>
-      <em>War of the Spark</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-m20"></i>
-      <em>Core Set 2020</em>
-    </li>
-    <li><!--
-   --><i class="ss ss-eld"></i>
-      <em>Throne of Eldraine</em>
-    </li>
-  </ul>
+  <div class="column-container">
 
-  <hr />
+    <div class="column-section">
+      <h3>Currently in Standard</h3>
+      <p>The following sets are currently in Standard:</p>
+      <ul class="icon-list">
+        <li><!--
+       --><i class="ss ss-xln"></i>
+          <em>Ixalan</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-rix"></i>
+          <em>Rivals of Ixalan</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-dom"></i>
+          <em>Dominaria</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-m19"></i>
+          <em>Core Set 2019</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-grn"></i>
+          <em>Guilds of Ravnica</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-rna"></i>
+          <em>Ravnica Allegiance</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-war"></i>
+          <em>War of the Spark</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-m20"></i>
+          <em>Core Set 2020</em>
+        </li>
+      </ul>
+      <p>The following cards are currently banned:</p>
+      <ul class="icon-list">
+        <li><!--
+       --><i class="ss ss-xln"></i>
+          <em><a href="https://scryfall.com/card/xln/154/rampaging-ferocidon" target="_blank">Rampaging Ferocidon</a></em>
+        </li>
+      </ul>
+    </div>
+
+    <div class="column-section">
+      <h3>Upcoming Releases</h3>
+      <p>The following sets are Standard-legal, and will be added to Standard on release:</p>
+      <ul class="icon-list">
+        <li><!--
+       --><i class="ss ss-eld"></i>
+          <em>Throne of Eldraine</em>
+          <span class="no-wrap">(releases 2019-10-04)</span>
+        </li>
+        <li><!--
+       --><i class="ss"></i>
+          <em>Winter 2020 set,
+          <span class="no-wrap">codename "Baseball"</span></em>
+        </li>
+        <li><!--
+       --><i class="ss"></i>
+          <em>Spring 2020 set,
+          <span class="no-wrap">codename "Cricket"</span></em>
+        </li>
+        <li><!--
+       --><i class="ss"></i>
+          <em>Summer 2020 set,
+          <span class="no-wrap">likely "Core Set 2021"</span></em>
+        </li>
+      </ul>
+      <!--<p>Note that cards from <em>Throne of Eldraine</em> <span class="no-wrap">pre-release</span> events cannot be used in Standard until the set's official release on 2019-10-04.</p>-->
+    </div>
+
+    <div class="column-section">
+      <h3>2019 Rotation</h3>
+      <p>
+        The next rotation coincides with the release of <em>Throne of Eldraine</em> on <span class="no-wrap">2019-10-04.</span>
+      </p>
+      <p>
+        The following sets will be rotate out of Standard:
+      </p>
+      <ul class="icon-list">
+        <li><!--
+       --><i class="ss ss-xln"></i>
+          <em>Ixalan</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-rix"></i>
+          <em>Rivals of Ixalan</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-dom"></i>
+          <em>Dominaria</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-m19"></i>
+          <em>Core Set 2019</em>
+        </li>
+      </ul>
+      <p>The following sets will remain in Standard:</p>
+      <ul class="icon-list">
+        <li><!--
+       --><i class="ss ss-grn"></i>
+          <em>Guilds of Ravnica</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-rna"></i>
+          <em>Ravica Allegiance</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-war"></i>
+          <em>War of the Spark</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-m20"></i>
+          <em>Core Set 2020</em>
+        </li>
+        <li><!--
+       --><i class="ss ss-eld"></i>
+          <em>Throne of Eldraine</em>
+        </li>
+      </ul>
+    </div>
+
+  </div>
 
   <a name="details"></a>
-  <h3>More Details</h3>
-  <p>
-    Standard consists of cards from recent Standard-legal sets.
-    "Standard-legal" is a designation applied by Wizards of the Coast to the main card sets released each year (typically four per year, distributed evenly).
-  </p>
-  <p>
-    Every Standard-legal set is added to Standard when it is released, and is removed from Standard two "rotations" later.
-    One rotation occurs each year, typically coinciding with the release of the Fall set in September or October.
-    This means most sets remain in Standard for 15-24 months.
-  </p>
-  <p>
-    Sometimes, cards included in Standard-legal sets may mave been included in previously-released sets.
-    For example, Duress was printed in M20, M19, and many other sets dating back to 1998.
-    A player may use a any copy of such a card in their Standard deck, regardless of when it was originally printed.
-  </p>
-  <p>
-    There are additional rules for constructing decks for Standard, such as the minimum number of required cards.
-    See the full rules on the official Magic: the Gathering website <a href="https://magic.wizards.com/en/content/standard-formats-magic-gathering" target="_blank">here</a>.
-  </p>
+  <div class="non-column-section">
+    <h3>Details</h3>
+    <p>
+      Each year, four main Standard-legal sets are released by <em>Wizards of the Coast</em>.
+    </p>
+    <p>
+      Standard-legal sets are added to Standard on release, and are removed two "rotations" later.
+      Rotations are annual, typically coinciding with the release of the fall set in September or October.
+      This means most sets remain in Standard for <span class="no-wrap">15-24</span> months.
+    </p>
+    <p>
+      A Standard deck contains at least 60 Standard cards, plus an optional sideboard of up to 15 Standard cards.
+      No more than 4 copies of a card may be included, except for basic land cards: <em>Plains</em>, <em>Islands</em>, <em>Swamps</em>, <em>Mountains</em>, and <em>Forests</em>.
+    </p>
+    <p>
+      Full rules are available on the official Magic: the Gathering website <a href="https://magic.wizards.com/en/content/standard-formats-magic-gathering" target="_blank">here</a>.
+    </p>
+    <p>
+      Any copy of a Standard card can be included in a Standard deck, even if that copy is from a non-Standard set.
+      For instance, a Standard deck may include a 1998 copy of <i class="ss ss-usg"></i> <a href="" target="_blank">Duress</a> from <em>Urza's Saga</em>, because <i class="ss ss-m20"></i> <a href="" target="_blank">Duress</a> was also included in <em>Core Set 2020</em>.
+    </p>
+  </div>
 
-  <h3>Non-Standard Sets</h3>
-  <p>
-    Some sets are not Standard-legal, and are not added to Standard on release.
-    Some cards from these sets are also available in Standard sets (such as Giant Growth in both War of the Spark and Battlebond) but any other cards cannot be used in Standard.
-  </p>
-  <p>Recent sets which are not Standard-legal:</p>
-  <ul class="icon-list">
-    <li><!--
-   --><i class="ss ss-ima"></i>
-      Iconic Masters
-    </li>
-    <li><!--
-   --><i class="ss ss-e02"></i>
-      Explorers of Ixalan Box Set
-    </li>
-    <li><!--
-   --><i class="ss ss-ust"></i>
-      Unstable
-    </li>
-    <li><!--
-   --><i class="ss ss-a25"></i>
-      Masters 25
-    </li>
-    <li><!--
-   --><i class="ss ss-bbd"></i>
-      Battlebond
-    </li>
-    <li><!--
-   --><i class="ss ss-cm2"></i>
-      Commander Anthology Volume II Preconstructed Decks
-    </li>
-    <li><!--
-   --><i class="ss ss-c18"></i>
-      Commander 2018 Preconstructed Decks
-    </li>
-    <li><!--
-   --><i class="ss ss-none"></i>
-      <em>Guild Kit</em> Preconstructed Decks
-    </li>
-    <li><!--
-   --><i class="ss ss-uma"></i>
-      Ultimate Masters
-    </li>
-    <li><!--
-   --><i class="ss ss-mh1"></i>
-      Modern Horizons
-    </li>
-    <li><!--
-   --><i class="ss ss-none"></i>
-      <em>Signature Spellbook</em> Box Sets
-    </li>
-  </ul>
-  <p>Upcoming sets which contain non-Standard cards:</p>
-  <ul class="icon-list">
-    <li><!--
-   --><i class="ss ss-c19"></i>
-      Commander 2019 Preconstructed Decks
-    </li>
-  </ul>
-  <p>Some non-"Booster Pack" products contain Standard-legal cards only, and can be used in Standard. Recent examples of such products include:</p>
-  <ul>
-    <li>Preconstructed "Planeswalker Decks" from Standard-legal sets</li>
-    <li>Preconstructed 2019 "Challenger Decks"</li>
-    <li>Preconstructed 2019 and 2020 "Welcome Decks" given away by game stores</li>
-  </ul>
-  <p>
-    Note that cards received at pre-release events are still not considered "released" and may not be used in Standard until the date of the set's official release.
-  </p>
+  <div class="non-column-section">
+    <h3>Getting Cards for Standard</h3>
+    <p>
+      Most Standard cards can be opened in booster packs of the Standard-legal sets listed above.
+      Many game stores also carry a selection of Standard cards that can be purchased individually.
+    </p>
+    <p>Aside from booster packs, there are several other products that contain a selection of only Standard cards:</p>
+    <ul>
+      <li>Preconstructed "Planeswalker Decks" for Standard-legal sets</li>
+      <li>Preconstructed 2019 and 2020 "Welcome Decks" given away by game stores</li>
+      <li>Preconstructed 2019 "Challenger Decks"</li>
+    </ul>
+  </div>
 
-  <h3>Related Formats</h3>
-  <p>
-    <em>Brawl</em> is a format which uses the same Standard-legal set rotation as Standard.
-    Brawl is typically played with 3 or more players per game, and uses different rules for deck construction and gameplay.
-    Read more about Brawl on the offical Magic: the Gathering website <a href="https://magic.wizards.com/en/game-info/gameplay/formats/brawl" target="_blank">here</a>.
-  </p>
-  <p>
-    <em>Modern</em> is a format where players can use cards from any Standard-Legal set released since 8th Edition <span class="no-wrap">(2003-07-28)</span>, as well as the Modern-only set Modern Horizons.
-    Sets of cards are never removed from Modern, but numerous cards are included on the Modern banlist.
-    Every current Standard deck is technically a legal (but low-powered) Modern deck, and will continue to be legal in Modern after its cards rotate out of Standard.
-    Read more about Modern on the official Magic: the Gathering website <a href="https://magic.wizards.com/en/game-info/gameplay/formats/modern" target="_blank">here</a>.
-  </p>
+  <div class="non-column-section">
+    <h3>Non-Standard Sets</h3>
+    <p>Some sets are not Standard-legal, and are not added to Standard on release.</p>
+    <p>Recent sets which are not Standard-legal include:</p>
+    <ul class="icon-list">
+      <li><!--
+     --><i class="ss ss-ima"></i>
+        Iconic Masters
+      </li>
+      <li><!--
+     --><i class="ss ss-e02"></i>
+        Explorers of Ixalan Box Set
+      </li>
+      <li><!--
+     --><i class="ss ss-ust"></i>
+        Unstable
+      </li>
+      <li><!--
+     --><i class="ss ss-a25"></i>
+        Masters 25
+      </li>
+      <li><!--
+     --><i class="ss ss-bbd"></i>
+        Battlebond
+      </li>
+      <li><!--
+     --><i class="ss ss-cm2"></i>
+        Commander Anthology Volume II Preconstructed Decks
+      </li>
+      <li><!--
+     --><i class="ss ss-c18"></i>
+        Commander 2018 Preconstructed Decks
+      </li>
+      <li><!--
+     --><i class="ss ss-none"></i>
+        <em>Guild Kit</em> Preconstructed Decks
+      </li>
+      <li><!--
+     --><i class="ss ss-uma"></i>
+        Ultimate Masters
+      </li>
+      <li><!--
+     --><i class="ss ss-mh1"></i>
+        Modern Horizons
+      </li>
+      <li><!--
+     --><i class="ss ss-none"></i>
+        <em>Signature Spellbook</em> Box Sets
+      </li>
+    </ul>
+    <p>Upcoming sets which are not Standard-legal include:</p>
+    <ul class="icon-list">
+      <li><!--
+     --><i class="ss ss-c19"></i>
+        Commander 2019 Preconstructed Decks
+      </li>
+    </ul>
+  </div>
+
+  <div class="non-column-section">
+    <h3>Related Formats</h3>
+    <p>
+      <em>Brawl</em> is a format which uses the same Standard-legal set rotation as Standard.
+      Brawl is often played casually with 3 or more players per game, and uses different rules for deck construction and gameplay.
+      <br />
+      Read more about Brawl on the offical Magic: the Gathering website <a href="https://magic.wizards.com/en/game-info/gameplay/formats/brawl" target="_blank">here</a>.
+    </p>
+    <p>
+      <em>Modern</em> is a format which allows cards from any Standard-Legal set released since 2003's <em>8th Edition</em>, as well as the <span class="no-wrap">non-Standard-legal</span> set <em>Modern Horizons</em>.
+      Every card added to Standard is also added to Modern.
+      Sets never rotate out of Modern, but numerous cards are included on the Modern banlist.
+      <br />
+      Read more about Modern on the official Magic: the Gathering website <a href="https://magic.wizards.com/en/game-info/gameplay/formats/modern" target="_blank">here</a>.
+    </p>
+  </div>
 
 </div>
 </body>
