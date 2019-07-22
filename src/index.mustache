@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>MTG Standard</title>
+  <title>MTG {{format_name}}</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css" rel="stylesheet" type="text/css" />
@@ -94,6 +94,10 @@
     .column-container {
       margin-top: 1rem;
     }
+    .brawl-header {
+      display: inline-block;
+      max-width: 28rem;
+    }
 
     @media screen and (min-width: 48rem) {
       .page-wrapper {
@@ -133,8 +137,13 @@
 <div class="page-wrapper">
 
   <div class="header-section">
-    <p>
+    <p {{#is_brawl}}class="brawl-header"{{/is_brawl}}>
+      {{#is_standard}}
       <em>Standard</em> is a <em>Magic: the Gathering</em> format which only allows cards from recent <em>Standard-legal<sup><a href="#details">&dagger;</a></sup></em> sets.
+      {{/is_standard}}
+      {{#is_brawl}}
+      <em>Brawl</em> is a <em>Commander</em>-like <em>Magic: the Gathering</em> format which only allows cards from recent <em>Standard-legal<sup><a href="#details">&dagger;</a></sup></em> sets.
+      {{/is_brawl}}
     </p>
   </div>
 
@@ -142,10 +151,10 @@
 
     <div class="column-section">
       <div class="fill-line-wrapper">
-        <h3>Currently in Standard</h3>
+          <h3>Currently in {{format_name}}</h3>
         <span class="fill-line"></span>
       </div>
-      <p>These sets are currently in Standard:</p>
+      <p>These sets are currently in {{format_name}}:</p>
       <ul class="icon-list">
         <li><!--
        --><i class="ss ss-xln"></i>
@@ -180,6 +189,7 @@
           <em>Core Set 2020</em>
         </li>
       </ul>
+      {{#is_standard}}
       <p>These cards are currently banned:</p>
       <ul class="icon-list">
         <li><!--
@@ -187,6 +197,16 @@
           <em><a href="https://scryfall.com/card/xln/154/rampaging-ferocidon" target="_blank">Rampaging Ferocidon</a></em>
         </li>
       </ul>
+      {{/is_standard}}
+      {{#is_brawl}}
+      <p>These cards are currently banned:</p>
+      <ul class="icon-list">
+        <li><!--
+       --><i class="ss ss-xln"></i>
+          <em><a href="https://scryfall.com/card/xln/248/sorcerous-spyglass" target="_blank">Sorcerous Spyglass</a></em>
+        </li>
+      </ul>
+      {{/is_brawl}}
     </div>
 
     <div class="column-section">
@@ -194,7 +214,7 @@
         <h3>Upcoming Changes</h3>
         <span class="fill-line"></span>
       </div>
-      <p>These sets will be added to Standard on release:</p>
+      <p>These sets will be added to {{format_name}} on release:</p>
       <ul class="icon-list">
         <li><!--
        --><i class="ss ss-eld"></i>
@@ -204,7 +224,7 @@
       </ul>
       <!--
       <p>
-        Cards from <em>Throne of Eldraine</em> <span class="no-wrap">pre-release</span> events cannot be used in Standard until the set is officially released on 2019-10-04.
+      Cards from <em>Throne of Eldraine</em> <span class="no-wrap">pre-release</span> events cannot be used in {{format_name}} until the set is officially released on 2019-10-04.
       </p>
       -->
       <h4>Rotation</h4>
@@ -212,7 +232,7 @@
         The 2019 rotation coincides with the release of <em class="no-wrap">Throne of Eldraine</em> on <span class="no-wrap">2019-10-04.</span>
       </p>
       <p>
-        These sets will rotate out of Standard:
+          These sets will rotate out of {{format_name}}:
       </p>
       <ul class="icon-list">
         <li><!--
@@ -232,7 +252,7 @@
           <em>Core Set 2019</em>
         </li>
       </ul>
-      <p>These sets will remain in Standard:</p>
+      <p>These sets will remain in {{format_name}}:</p>
       <ul class="icon-list">
         <li><!--
        --><i class="ss ss-grn"></i>
@@ -266,38 +286,58 @@
   </div>
   <p>
     Each year, four Standard-legal sets are released by <em>Wizards of the Coast</em>.
+    {{#is_brawl}}
+    <br />
+    (Standard is a format which shares cards with Brawl)
+    {{/is_brawl}}
   </p>
   <p>
-    These sets are added to Standard on release, and are removed from standard after two "rotations".
+    These sets are added to {{format_name}} on release, and are removed from {{format_name}} after two "rotations".
     Rotations are annual, coinciding with the release of the fall set in September or October.
-    This means each set remains in Standard for <span class="no-wrap">15-24</span> months.
+    This means each set remains in {{format_name}} for <span class="no-wrap">15-24</span> months.
   </p>
   <p>
-    A legal Standard deck contains at least 60 cards, plus an optional sideboard of up to 15 cards.
-    Each card must be included in a current Standard-legal set.
-    No more than 4 copies of a card may be included, except for the basic land cards
+    {{#is_standard}}
+    A legal Standard deck has at least 60 cards, plus an optional sideboard of up to 15 cards.
+    {{/is_standard}}
+    {{#is_brawl}}
+    A legal Brawl deck has a <em>Commander</em> (a Legendary Creature or Planeswalker) and 59 other cards.
+    Each card must have a <em>color identity</em> that falls within the color identity of the Commander.
+    (Color identity is determined by the colored mana symbols that appear on a card).
+    {{/is_brawl}}
+    Each card must be from a set in {{format_name}}.
+    No more than {{#is_standard}}4 copies{{/is_standard}}{{#is_brawl}}1 copy{{/is_brawl}}
+    of a card may be included, except for the basic land cards
     <em>Plains</em>, <em>Island</em>, <em>Swamp</em>, <em>Mountain</em>, and <em>Forest</em>.
   </p>
+  <p>
+    Any copy of a card can be included in a {{format_name}} deck, even if that copy is from an older set.
+    For instance, a {{format_name}} deck may include a 1998 copy of <a href="https://scryfall.com/card/usg/132/duress" target="_blank">Duress</a>
+    from <em>Urza's Saga</em>, because <a href="https://scryfall.com/card/m20/97/duress" target="_blank">Duress</a>
+    was also included in <em>Core Set 2020</em>.
+  </p>
+  {{#is_standard}}
   <p>
     Full rules for Standard are available on the official Magic: the Gathering website
     <a href="https://magic.wizards.com/en/content/standard-formats-magic-gathering" target="_blank">here</a>.
   </p>
+  {{/is_standard}}
+  {{#is_brawl}}
   <p>
-    Any copy of a card can be included in a Standard deck, even if that copy is from an older set.
-    For instance, a Standard deck may include a 1998 copy of <a href="https://scryfall.com/card/usg/132/duress" target="_blank">Duress</a>
-    from <em>Urza's Saga</em>, because <a href="https://scryfall.com/card/m20/97/duress" target="_blank">Duress</a>
-    was also included in <em>Core Set 2020</em>.
+    Full rules for Brawl are available on the offical Magic: the Gathering website
+    <a href="https://magic.wizards.com/en/game-info/gameplay/formats/brawl" target="_blank">here</a>.
   </p>
+  {{/is_brawl}}
 
   <div class="fill-line-wrapper">
-    <h3>Getting Cards for Standard</h3>
+    <h3>Getting Cards for {{format_name}}</h3>
     <span class="fill-line"></span>
   </div>
   <p>
-    Most Standard cards can be opened in booster packs of the Standard-legal sets listed above.
-    Many game stores also carry a selection of Standard cards that can be purchased individually.
+    Most {{format_name}} cards can be opened in booster packs of the Standard-legal sets listed above.
+    Many game stores also carry a selection of {{format_name}} cards that can be purchased individually.
   </p>
-  <p>Aside from booster packs, there are several other products that contain a selection of only Standard cards:</p>
+  <p>Aside from booster packs, there are several other products that contain a selection of only {{format_name}} cards:</p>
   <ul>
     <li>Preconstructed "Planeswalker Decks" for Standard-legal sets</li>
     <li>Preconstructed 2019 and 2020 "Welcome Decks" given away by game stores</li>
@@ -305,10 +345,10 @@
   </ul>
 
   <div class="fill-line-wrapper">
-    <h3>Non-Standard Sets</h3>
+    <h3>Non-{{format_name}} Sets</h3>
     <span class="fill-line"></span>
   </div>
-  <p>Some sets are not Standard-legal, and are not added to Standard on release.</p>
+  <p>Some sets are not Standard-legal, and are not added to {{format_name}} on release.</p>
   <p>Recent sets which are not Standard-legal include:</p>
   <ul class="icon-list">
     <li><!--
@@ -372,9 +412,12 @@
     <h3>Related Formats</h3>
     <span class="fill-line"></span>
   </div>
+  {{#is_standard}}
   <p>
     <em>Brawl</em> is a format which uses the same Standard-legal set rotation as Standard.
     Brawl is often played casually with 3 or more players per game, and uses different rules for deck construction and gameplay.
+    <br />
+    Our sister website <a href="https://mtgbrawl.net">mtgbrawl.net</a> offers more information about Brawl.
     <br />
     Read more about Brawl on the offical Magic: the Gathering website <a href="https://magic.wizards.com/en/game-info/gameplay/formats/brawl" target="_blank">here</a>.
   </p>
@@ -383,12 +426,34 @@
     Every card added to Standard is also added to Modern.
     Sets never rotate out of Modern, but numerous cards are included on the Modern banlist.
     <br />
-    Read more about Modern on the official Magic: the Gathering website <a href="https://magic.wizards.com/en/game-info/gameplay/formats/modern" target="_blank">here</a>.
+    Read more about Modern on the official Magic: the Gathering website
+    <a href="https://magic.wizards.com/en/game-info/gameplay/formats/modern" target="_blank">here</a>.
   </p>
+  {{/is_standard}}
+  {{#is_brawl}}
+  <p>
+    <em>Standard</em> is a format which uses the same Standard-legal set rotation as Brawl.
+    Standard is played competitively, <span class="no-wrap">1-versus-1</span>, and uses different rules for deck construction and gameplay.
+    <br />
+    Our sister site <a href="https://mtgstandard.net">mtgstandard.net</a> offers more information about Standard.
+    <br />
+    Read more about Standard on the official Magic: the Gathering website 
+    <a href="https://magic.wizards.com/en/content/standard-formats-magic-gathering" target="_blank">here</a>.
+  </p>
+  <p>
+    <em>Commander</em> is the other format on which Brawl is based.
+    Commander allows cards from every Magic: the Gathering set ever printed, and features 100-card decks and other gameplay changes.
+    <br />
+    The official Commander website is <a href="http://mtgcommander.net" target="_blank">mtgcommander.net</a>.
+    <br />
+    Read more about Commander on the official Magic: the Gathering website
+    <a href="" target="_blank">here</a>.
+  </p>
+  {{/is_brawl}}
 
   <div class="footer">
     <p>
-      <em>MTG Standard</em> is unofficial Fan Content permitted under the Fan Content Policy.
+      <em>MTG {{format_name}}</em> is unofficial Fan Content permitted under the Fan Content Policy.
       Not approved/endorsed by Wizards.
       Portions of the materials used are property of Wizards of the Coast.
       <br />
