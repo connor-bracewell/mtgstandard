@@ -1,4 +1,12 @@
 {
   "format_name": "Brawl",
-  "is_brawl": true
+  "is_brawl": true,
+  "has_banned_cards": true,
+  "banned_cards": [
+    {
+      "name": "Sorcerous Spyglass",
+      "url": "https://scryfall.com/card/eld/233/sorcerous-spyglass",
+      "set": "eld"
+    }
+  ]
 }

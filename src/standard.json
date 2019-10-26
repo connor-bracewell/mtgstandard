@@ -1,4 +1,12 @@
 {
   "format_name": "Standard",
-  "is_standard": true
+  "is_standard": true,
+  "has_banned_cards": true,
+  "banned_cards": [
+    {
+      "name": "Field of the Dead",
+      "url": "https://scryfall.com/card/m20/247/field-of-the-dead",
+      "set": "m20"
+    }
+  ]
 }

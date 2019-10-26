@@ -177,20 +177,17 @@
           <em>Throne of Eldraine</em>
         </li>
       </ul>
-      {{#is_standard}}
-      <!--<p>These cards are currently banned:</p>
-      <ul class="icon-list">
-      </ul>-->
-      {{/is_standard}}
-      {{#is_brawl}}
+      {{#has_banned_cards}}
       <p>These cards are currently banned:</p>
       <ul class="icon-list">
+        {{#banned_cards}}
         <li><!--
-       --><i class="ss ss-eld"></i>
-          <em><a href="https://scryfall.com/card/eld/233/sorcerous-spyglass" target="_blank">Sorcerous Spyglass</a></em>
+        --><i class="ss ss-{{set}}"></i>
+        <em><a href="{{url}}" target="_blank">{{name}}</a></em>
         </li>
+        {{/banned_cards}}
       </ul>
-      {{/is_brawl}}
+      {{/has_banned_cards}}
     </div>
 
     <div class="column-section">
