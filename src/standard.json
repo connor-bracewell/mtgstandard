@@ -4,6 +4,21 @@
   "has_banned_cards": true,
   "banned_cards": [
     {
+      "name": "Oko, Thief of Crowns",
+      "url": "https://scryfall.com/card/eld/197/oko-thief-of-crowns",
+      "set": "eld"
+    },
+    {
+      "name": "Once Upon a Time",
+      "url": "https://scryfall.com/card/eld/169/once-upon-a-time",
+      "set": "eld"
+    },
+    {
+      "name": "Veil of Summer",
+      "url": "https://scryfall.com/card/m20/198/veil-of-summer",
+      "set": "m20"
+    },
+    {
       "name": "Field of the Dead",
       "url": "https://scryfall.com/card/m20/247/field-of-the-dead",
       "set": "m20"

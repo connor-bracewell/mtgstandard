@@ -4,6 +4,11 @@
   "has_banned_cards": true,
   "banned_cards": [
     {
+      "name": "Oko, Thief of Crowns",
+      "url": "https://scryfall.com/card/eld/197/oko-thief-of-crowns",
+      "set": "eld"
+    },
+    {
       "name": "Sorcerous Spyglass",
       "url": "https://scryfall.com/card/eld/233/sorcerous-spyglass",
       "set": "eld"
