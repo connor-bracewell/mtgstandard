@@ -154,37 +154,17 @@
           <h3>Currently in {{format_name}}</h3>
         <span class="fill-line"></span>
       </div>
-      <p>These sets are currently in {{format_name}}:</p>
+      <p>These sets are in {{format_name}}:</p>
       <ul class="icon-list">
-        <li><!--
-       --><i class="ss ss-grn"></i>
-          <em>Guilds of Ravnica</em>
-        </li>
-        <li><!--
-       --><i class="ss ss-rna"></i>
-          <em>Ravnica Allegiance</em>
-        </li>
-        <li><!--
-       --><i class="ss ss-war"></i>
-          <em>War of the Spark</em>
-        </li>
-        <li><!--
-       --><i class="ss ss-m20"></i>
-          <em>Core Set 2020</em>
-        </li>
-        <li><!--
-       --><i class="ss ss-eld"></i>
-          <em>Throne of Eldraine</em>
-        </li>
+        {{#current_sets}}
+        <li><i class="ss ss-{{code}}"></i> <em>{{name}}</em></li>
+        {{/current_sets}}
       </ul>
       {{#has_banned_cards}}
-      <p>These cards are currently banned:</p>
+      <p>These cards are banned:</p>
       <ul class="icon-list">
         {{#banned_cards}}
-        <li><!--
-        --><i class="ss ss-{{set}}"></i>
-        <em><a href="{{url}}" target="_blank">{{name}}</a></em>
-        </li>
+        <li><i class="ss ss-{{set}}"></i> <em><a href="{{url}}" target="_blank">{{name}}</a></em></li>
         {{/banned_cards}}
       </ul>
       {{/has_banned_cards}}
@@ -192,9 +172,10 @@
 
     <div class="column-section">
       <div class="fill-line-wrapper">
-        <h3>Recent & Upcoming Changes</h3>
+        <h3><!--Recent & -->Upcoming Changes</h3>
         <span class="fill-line"></span>
       </div>
+      <!--
       <p>
         The 2019 rotation coincided with the release of <em class="no-wrap">Throne of Eldraine</em> on <span class="no-wrap">2019-10-04</span>.
       </p>
@@ -203,53 +184,37 @@
       </p>
       <ul class="icon-list">
         <li><!--
-       --><i class="ss ss-xln"></i>
+        -><i class="ss ss-xln"></i>
           <em>Ixalan</em>
         </li>
         <li><!--
-       --><i class="ss ss-rix"></i>
+        -><i class="ss ss-rix"></i>
           <em>Rivals of Ixalan</em>
         </li>
         <li><!--
-       --><i class="ss ss-dom"></i>
+        -><i class="ss ss-dom"></i>
           <em>Dominaria</em>
         </li>
         <li><!--
-       --><i class="ss ss-m19"></i>
+        -><i class="ss ss-m19"></i>
           <em>Core Set 2019</em>
         </li>
       </ul>
+        -->
+      <!--
       <p>
         Most of the upcoming {{format_name}} products for 2020 have already been announced by <em class="no-wrap">Wizards of the Coast</em>.
       </p>
+      -->
       <p>These sets will be added to {{format_name}} on release:</p>
       <ul class="icon-list">
-        <li><!--
-       --><i class="ss ss-???"></i>
-          <em>Theros: Beyond Death</em>
-          <span class="no-wrap">(on 2020-01-24)</span>
-        </li>
-        <li><!--
-       --><i class="ss ss-???"></i>
-          <em>Ikoria: Lair of Behemoths</em>
-          <span class="no-wrap">(on 2020-04-24)</span>
-        </li>
-        <li><!--
-       --><i class="ss ss-???"></i>
-          <em>Core Set 2021</em>
-          <span class="no-wrap">(in Q3 2020)</span>
-        </li>
-        <li><!--
-       --><i class="ss ss-???"></i>
-          <em>Zendikar Rising</em>
-          <span class="no-wrap">(in Q4 2020)</span>
-        </li>
+        {{#upcoming_sets}}
+        <li><i class="ss ss-{{code}}"></i> <em>{{name}}</em> <span class="no-wrap">({{release_date}})</span></li>
+        {{/upcoming_sets}}
       </ul>
-      <!--
       <p>
-      Cards from <em>Throne of Eldraine</em> <span class="no-wrap">pre-release</span> events cannot be used in {{format_name}} until the set is officially released on 2019-10-04.
+      Cards from <em>Theros: Beyond Death</em> <span class="no-wrap">pre-release</span> events cannot be used in {{format_name}} until the set is officially released on January 24.
       </p>
-      -->
       <!--
       <p>
         The 2020 rotation will coincide with the release of <em class="no-wrap">Zendikar Rising</em> in <span class="no-wrap">Q4 2020</span>.
@@ -399,7 +364,7 @@
       <em>Commander 2019</em>
     </li>
     <li><!--
-   --><i class="ss ss-???"></i>
+   --><i class="ss ss-gn2"></i>
       <em>Game Night: 2019 Edition</em>
     </li>
   </ul>

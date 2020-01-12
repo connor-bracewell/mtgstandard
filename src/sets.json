@@ -1,0 +1,46 @@
+{
+  "current_sets": [
+    {
+      "name": "Guilds of Ravnica",
+      "code": "grn"
+    },
+    {
+      "name": "Ravnice Allegiance",
+      "code": "rna"
+    },
+    {
+      "name": "War of the Spark",
+      "code": "war"
+    },
+    {
+      "name": "Core Set 2020",
+      "code": "m20"
+    },
+    {
+      "name": "Throne of Eldraine",
+      "code": "eld"
+    }
+  ],
+  "upcoming_sets": [
+    {
+      "name": "Theros: Beyond Death",
+      "code": "thb",
+      "release_date": "on January 24"
+    },
+    {
+      "name": "Ikoria: Lair of Behemoths",
+      "code": "xikr",
+      "release_date": "on April 24"
+    },
+    {
+      "name": "Core Set 2021",
+      "code": "m21",
+      "release_date": "in Q3"
+    },
+    {
+      "name": "Zendikar Rising",
+      "code": "xznr",
+      "release_date": "in Q4"
+    }
+  ]
+}
