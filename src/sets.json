@@ -19,14 +19,13 @@
     {
       "name": "Throne of Eldraine",
       "code": "eld"
+    },
+    {
+      "name": "Theros: Beyond Death",
+      "code": "thb"
     }
   ],
   "upcoming_sets": [
-    {
-      "name": "Theros: Beyond Death",
-      "code": "thb",
-      "release_date": "on January 24"
-    },
     {
       "name": "Ikoria: Lair of Behemoths",
       "code": "xikr",
