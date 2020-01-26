@@ -25,6 +25,7 @@
       "code": "thb"
     }
   ],
+  "has_upcoming_sets": true,
   "upcoming_sets": [
     {
       "name": "Ikoria: Lair of Behemoths",
@@ -41,5 +42,29 @@
       "code": "xznr",
       "release_date": "in Q4"
     }
-  ]
+  ],
+  "has_upcoming_rotation": true,
+  "upcoming_rotation": {
+    "rotation_year": "2020",
+    "trigger_set": "Zendikar Rising",
+    "trigger_time": "in Q4",
+    "rotating_sets": [
+      {
+        "name": "Guilds of Ravnica",
+        "code": "grn"
+      },
+      {
+        "name": "Ravnice Allegiance",
+        "code": "rna"
+      },
+      {
+        "name": "War of the Spark",
+        "code": "war"
+      },
+      {
+        "name": "Core Set 2020",
+        "code": "m20"
+      }
+    ]
+  }
 }

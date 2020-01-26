@@ -177,32 +177,6 @@
       </div>
       <!--
       <p>
-        The 2019 rotation coincided with the release of <em class="no-wrap">Throne of Eldraine</em> on <span class="no-wrap">2019-10-04</span>.
-      </p>
-      <p>
-          These sets were rotated out of {{format_name}}:
-      </p>
-      <ul class="icon-list">
-        <li><!--
-        -><i class="ss ss-xln"></i>
-          <em>Ixalan</em>
-        </li>
-        <li><!--
-        -><i class="ss ss-rix"></i>
-          <em>Rivals of Ixalan</em>
-        </li>
-        <li><!--
-        -><i class="ss ss-dom"></i>
-          <em>Dominaria</em>
-        </li>
-        <li><!--
-        -><i class="ss ss-m19"></i>
-          <em>Core Set 2019</em>
-        </li>
-      </ul>
-        -->
-      <!--
-      <p>
         Most of the upcoming {{format_name}} products for 2020 have already been announced by <em class="no-wrap">Wizards of the Coast</em>.
       </p>
       -->
@@ -215,31 +189,19 @@
       <!--<p>
       Cards from <em>Theros: Beyond Death</em> <span class="no-wrap">pre-release</span> events cannot be used in {{format_name}} until the set is officially released on January 24.
       </p>-->
-      <!--
+      {{#has_upcoming_rotation}}
       <p>
-        The 2020 rotation will coincide with the release of <em class="no-wrap">Zendikar Rising</em> in <span class="no-wrap">Q4 2020</span>.
-      </p>
-      <p>
-          These sets will rotate out of {{format_name}}:
+        The {{upcoming_rotation.rotation_year}} rotation will coincide with the release of <em class="no-wrap">{{upcoming_rotation.trigger_set}}</em> <span class="no-wrap">({{upcoming_rotation.trigger_time}})</span>.
+        <br />
+        These sets will rotate out of {{format_name}}:
       </p>
       <ul class="icon-list">
-        <li><!--
-       ---<i class="ss ss-grn"></i>
-          <em>Guilds of Ravnica</em>
-        </li>
-        <li><!--
-       ---<i class="ss ss-rna"></i>
-          <em>Ravnica Allegiance</em>
-        </li>
-        <li><!--
-       ---<i class="ss ss-war"></i>
-          <em>War of the Spark</em>
-        </li>
-        <li><!--
-       ---<i class="ss ss-m20"></i>
-          <em>Core Set 2020</em>
-        </li>
+        {{#upcoming_rotation.rotating_sets}}
+        <li><i class="ss ss-{{code}}"></i> <em>{{name}}</em></li>
+        {{/upcoming_rotation.rotating_sets}}
       </ul>
+      {{/has_upcoming_rotation}}
+      <!--
       <p>These sets will remain in {{format_name}}:</p>
       <ul class="icon-list">
         <li><!--
