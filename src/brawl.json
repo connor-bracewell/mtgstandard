@@ -5,17 +5,17 @@
   "banned_cards": [
     {
       "name": "Drannith Magistrate",
-      "url": "https://scryfall.com/card/iko/11/drannith-magistrate"
+      "url": "https://scryfall.com/card/iko/11/drannith-magistrate",
       "set": "iko"
     },
     {
       "name": "Lutri, the Spellchaser",
-      "url": "https://scryfall.com/card/iko/227/lutri-the-spellchaser"
+      "url": "https://scryfall.com/card/iko/227/lutri-the-spellchaser",
       "set": "iko"
     },
     {
       "name": "Winota, Joiner of Forces",
-      "url": "https://scryfall.com/card/iko/216/winota-joiner-of-forces"
+      "url": "https://scryfall.com/card/iko/216/winota-joiner-of-forces",
       "set": "iko"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "name": "Golos, Tireless Pilgrim",
-      "url": "https://scryfall.com/card/m20/226/golos-tireless-pilgrim"
+      "url": "https://scryfall.com/card/m20/226/golos-tireless-pilgrim",
       "set": "m20"
     },
   ]
