@@ -23,19 +23,18 @@
     {
       "name": "Theros: Beyond Death",
       "code": "thb"
+    },
+    {
+      "name": "Ikoria: Lair of Behemoths",
+      "code": "iko",
     }
   ],
   "has_upcoming_sets": true,
   "upcoming_sets": [
     {
-      "name": "Ikoria: Lair of Behemoths",
-      "code": "xikr",
-      "release_date": "on April 24"
-    },
-    {
       "name": "Core Set 2021",
       "code": "m21",
-      "release_date": "in Q3"
+      "release_date": "on July 3"
     },
     {
       "name": "Zendikar Rising",
